@@ -1,0 +1,219 @@
+<nav class="navbar navbar-expand-lg wn-nav">
+  <a class="navbar-brand ml-4" href="#!">WhatNow</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse navbar-dark" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#!/about">About Me <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ng-click="logout()" style="cursor:pointer;">lOGOUT</a>
+      </li>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid member">
+
+    <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+        <strong>Hey there, </strong> Did you know this website is touch screen friendly ?
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+  <!-- NOWPLAYING ROW -->
+
+  <div class="row clearfix">
+    <div class="col-12 ml-3 mt-5">
+
+      <h3>Now Playing</h3>
+    </div>
+  </div>
+  <div class="row clearfix mt-3">
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" ng-repeat="movie in movies">
+          <div class="card bg-dark text-white" style="width: 100%">
+            <img class="card-img" onerror='this.src="./img/nopic.jpg"' src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}"
+              alt="Card image">
+
+            <a href="#!/details/{{movie.id}}">
+              <div class="card-img-overlay">
+                <div style="height: 77%">
+
+                </div>
+                <div>
+                  <h5 class="card-title movie-title">{{movie.original_title}}</h5>
+                </div>
+
+
+              </div>
+
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+    </div>
+  </div>
+   <!-- NOWPLAYING ROW -->
+
+
+  <!-- POPULAR MOVIES ROW -->
+  <div class="row clearfix">
+      <div class="col-12 ml-3 mt-5">
+  
+        <h3>Popular Movies</h3>
+      </div>
+    </div>
+    <div class="row clearfix mt-3">
+  
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" ng-repeat="pop in popular">
+            <div class="card bg-dark text-white" style="width: 100%">
+              <img class="card-img" onerror='this.src="./img/nopic.jpg"' src="https://image.tmdb.org/t/p/w500{{pop.backdrop_path}}"
+                alt="Card image">
+  
+              <a href="#!/details/{{pop.id}}">
+                <div class="card-img-overlay">
+                  <div style="height: 77%">
+  
+                  </div>
+                  <div>
+                    <h5 class="card-title pop-title">{{pop.original_title}}</h5>
+                  </div>
+  
+  
+                </div>
+  
+              </a>
+            </div>
+          </div>
+  
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+  
+      </div>
+    </div>
+    <!-- POPULAR MOVIES ROW -->
+
+    <!-- UPCOMING MOVIES REGION INDO -->
+    <div class="row clearfix">
+        <div class="col-12 ml-3 mt-5">
+    
+          <h3>Upcoming Movies in Indonesia</h3>
+        </div>
+      </div>
+      <div class="row clearfix mt-3">
+    
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" ng-repeat="up in upcoming">
+              <div class="card bg-dark text-white" style="width: 100%">
+                <img class="card-img" onerror='this.src="./img/nopic.jpg"' src="https://image.tmdb.org/t/p/w500{{up.backdrop_path}}"
+                  alt="Card image">
+    
+                <a href="#!/details/{{up.id}}">
+                  <div class="card-img-overlay">
+                    <div style="height: 77%">
+    
+                    </div>
+                    <div>
+                      <h5 class="card-title up-title">{{up.original_title}}</h5>
+                      <h5 class="card-title">Release on {{up.release_date}}</h5>
+                    </div>
+    
+    
+                  </div>
+    
+                </a>
+              </div>
+            </div>
+    
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+    
+        </div>
+      </div>
+   <!-- UPCOMING MOVIES REGION INDO -->
+
+
+   <div class="row bg-black mt-5" style="height: 400px">
+     <div class="col-3 mt-5 ml-4 text-center">
+      <img class="img-fluid" style="margin-top: 4rem;" onerror='this.src="./img/nopic.jpg"' src="https://www.themoviedb.org/assets/1/v4/logos/powered-by-rectangle-green-dcada16968ed648d5eb3b36bbcfdd8cdf804f723dcca775c8f2bf4cea025aad6.svg" alt="">
+     </div>
+    
+   </div>
+
+</div>
+
+
+
+
+
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    freeMode: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      }
+    }
+  });
+
+ 
+</script>
+
+
+
+
+<!-- 
+<div class="col-sm-6 col-md-5 col-lg-4 antinempel" ng-repeat="movie in movies">
+    <div class="card bg-dark text-white" style="width: 90%" >
+      <img class="card-img" onerror='this.src="fotogua.jpg"' src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}" alt="Card image">
+
+      <a href="#!/details/{{movie.id}}">
+        <div class="card-img-overlay">
+          <div style="height: 77%">
+
+          </div>
+          <div>
+              <h5 class="card-title movie-title">{{movie.original_title}}</h5>
+          </div>
+          
+          
+        </div>
+
+      </a>
+    </div>
+
+
+  </div> -->

@@ -1,0 +1,88 @@
+<div class="container mt-5">
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col">
+                    <div class="pagination p3">
+                            <ul>
+                              <a href="#!/content"><li>1</li></a>
+                              <a class="is-active" href="#!/content2"><li>2</li></a>
+                              <a href="#!/content3"><li>3</li></a>
+                             
+                            </ul>
+                          </div>
+            </div>
+                
+        </div>
+            <div class="row">
+    
+                <div class="col-1">
+    
+                </div>
+                <div class="col">
+                    <div class="row ">
+    
+                        <div class="card-columns">
+                    
+                        <div class="card bg-light greyborder fadedown" ng-repeat="cafee in cafees">
+                            <img class="card-img-top" src="{{ cafee.restaurant.featured_image }}" alt="Cafe pic">
+                            <div class="card-body clearfix">
+                                <h5 class="card-title"><strong>{{ cafee.restaurant.name }}</strong></h5>
+        
+                                <p ng-hide="details == true" class="card-text text-secondary">{{ cafee.restaurant.location.address  }}</p>
+                                <div ng-show="details == true" class="gmap">
+                                        <iframe 
+                                            max-width="100%"
+                                            height="170" 
+                                            frameborder="0" 
+                                            scrolling="no" 
+                                            marginheight="0" 
+                                            marginwidth="0" 
+                                            src="https://maps.google.com/maps?q={{ cafee.restaurant.location.address  }}&hl=es;z=14&amp;output=embed">
+                                        </iframe>
+                                    </div>
+                                <p ng-show="details == true" class="card-text text-secondary"><strong>Perkiraan harga untuk 2 orang: </strong>{{ cafee.restaurant.currency}} {{ cafee.restaurant.average_cost_for_two }} </p>
+                                <p ng-show="details == true" class="card-text text-secondary"><strong>Jenis menu tersedia: </strong>{{ cafee.restaurant.cuisines  }}</p>
+                                <a class="rating card-text" style="background-color: #{{ cafe.restaurant.user_rating.rating_color }};">{{ cafee.restaurant.user_rating.aggregate_rating }}/5</a>
+                                <button type="button" ng-hide="details == true" ng-click="details = !details" class="btn btn-success">Details</button>
+                                <button type="button" ng-show="details == true" ng-click="details = !details" class="btn btn-success">Close</button>
+                             
+    
+                            </div>
+                            
+                            
+                    
+    
+                            </div>
+    
+    
+    
+    
+                            </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+               <!--  col-lg-3 col-sm-5 col-10 bg-light mt-5 nosidepadding shadow-lg -->
+    
+               
+    
+    
+            </div>
+            
+        </div>
+    
+    <div class="container-fluid">
+     
+            <div class="row mb-5">
+                    <div class="col-8"></div>
+                    <div class="col-2">
+                        <p class="text-muted" style="float:right;">Powered By: </p>
+                        
+                    </div>
+                    <div class="col-2">
+                        <a href="https://www.zomato.com/jakarta">
+                        <img width="50px" src="https://b.zmtcdn.com/images/logo/square_zomato_logo_new-2.svg">
+                        </a>
+                    </div>
+                </div>
+     
+    </div>

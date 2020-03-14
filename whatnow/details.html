@@ -1,0 +1,155 @@
+<div class="container-fluid details np bg-black">
+  <div class="row">
+    <div class="col-12 movie-banner">
+
+      <img onerror='this.src="./img/nopic.jpg"' src="https://image.tmdb.org/t/p/original/{{details.backdrop_path}}" width="100%">
+      <div class="card-img-overlay no-padding">
+        <nav class="navbar navbar-expand-lg wn-nav">
+          <a class="navbar-brand ml-4" href="#!/memberarea">WhatNow</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse navbar-dark" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#!/about">About Me <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" ng-click="logout()"  style="cursor:pointer;">lOGOUT</a>
+              </li>
+          </div>
+        </nav>
+        <div style="height: 37%">
+
+        </div>
+        <div class="col-sm-12 col-lg-6 banner-content">
+          <h5 class="card-title banner-movie-title">{{details.original_title}}</h5>
+          <h5 class="banner-movie-subtext">Rating {{details.vote_average}} </h5>
+          <span class="banner-movie-genres" ng-repeat="detail in details.genres">{{detail.name}} | </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row detail-more">
+
+      <div class="col-lg-3 col-md-4 col-sm-12">
+          <img src="https://image.tmdb.org/t/p/original/{{details.poster_path}}" width="80%">
+        </div>
+    <div class="col-md-7 col-sm-10 detail-more-content">
+      <h2>Overview</h2>
+      <br>
+      <p>
+        {{details.overview}}
+      </p>
+      <p><strong>Release Date</strong>: {{details.release_date}}</p>
+      <p><strong>Title</strong>: {{details.original_title}}</p>
+      <p><strong>Tagline</strong>: {{details.tagline}}</p>
+      <p><strong>Budget</strong>: {{details.budget | currency}}</p>
+      <p><strong>Revenue</strong>: {{details.revenue | currency}}
+      </p>
+      <p><strong>Popularity</strong>: {{details.popularity}}</p>
+      
+    </div>
+
+    <div class="row">
+        <div class="col-10" style="margin:0;padding:0;">
+          <h2>Production</h2>
+          <br>
+          <p><strong>Production Co:</strong> </p><span ng-repeat="detail in details.production_companies">{{detail.name}} </span>
+          <br><br>
+          <p><strong>Production Countries:</strong> </p><span ng-repeat="detail in details.production_countries">{{detail.name}} </span>
+        </div>
+      </div>
+
+   
+    
+  </div>
+
+  <div class="row clearfix">
+      <div class="col-12" style="margin-top: 4rem;
+      margin-left: 4rem;
+      padding: 10px;">
+  
+        <h3>Recommendation</h3>
+      </div>
+    </div>
+    <div class="row clearfix mt-3" style="margin-top: 4rem;
+    margin-left: 4rem;
+    padding: 10px;margin-right:4rem;">
+  
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" ng-repeat="rec in recom">
+            <div class="card bg-dark text-white" style="width: 100%">
+              <img class="card-img" onerror='this.src="./img/nopic.jpg"' src="https://image.tmdb.org/t/p/w500{{rec.backdrop_path}}"
+                alt="Card image">
+  
+              <a href="#!/details/{{rec.id}}" data-toggle="tooltip" title="Click for more details">
+                <div class="card-img-overlay">
+                  <div style="height: 77%">
+  
+                  </div>
+                  <div>
+                    <h5 class="card-title rec-title">{{rec.original_title}}</h5>
+                  </div>
+  
+  
+                </div>
+  
+              </a>
+            </div>
+          </div>
+  
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+  
+      </div>
+    </div>
+
+  
+
+</div>
+
+
+
+
+
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+  
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        }
+      }
+    });
+  
+   
+  </script>
+
+
+<!-- <img class="img-fluid" ng-repeat="detail in details.production_companies" src="https://image.tmdb.org/t/p/original{{detail.logo_path}}"> -->

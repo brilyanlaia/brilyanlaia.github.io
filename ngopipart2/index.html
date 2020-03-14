@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ngopi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
+        
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-animate.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-resource.min.js"></script>
+    <script src="app.js"></script>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/controller2.js"></script>
+    <script src="scripts/cafeFactory.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/aos.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/aos.css" />
+    
+</head>
+
+<body ng-app="ngopiApp" ng-controller="ngopiController" class="preload">
+
+
+
+
+    <div class="container-fluid">
+            
+        <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top ">
+                <a class="navbar-brand merek" href="#">ngoopi</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-5">
+                      <a class="nav-link navigate shiro" ng-click="go('/','slideLeft')">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-3"></li>
+                    <li class="nav-item mr-5">
+                      <a  class="nav-link navigate shiro" ng-click="go('/content','slideRight')">cafe</a>
+                    </li>
+                    <li class="nav-item mr-3"></li>
+                    <li class="nav-item mr-5">
+                      <a  class="nav-link navigate shiro" ng-click="go('/about','slideRight')">about</a>
+                    </li>
+                    <li class="nav-item mr-5"></li>
+                    <li class="nav-item mr-5"></li>
+                    
+                    
+                  </ul>
+                </div>
+              </nav>
+
+
+    <!-- <nav class="navbar sticky-top navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a ng-href="#!/" class="nav-link">home</a>
+                        <a ng-href="#!content" class="nav-link">content</a>
+                        <a href="/about" class="nav-link">about</a>
+                    </li>
+                </ul>
+               
+            </div>
+        </div>
+    </nav> -->
+
+ 
+<div class="ng-view" ng-class="pageAnimationClass">
+
+    
+</div>
+    
+
+
+
+  
+</div>
+
+<script>
+    AOS.init();
+    </script>
+
+</body>
+
+</html>

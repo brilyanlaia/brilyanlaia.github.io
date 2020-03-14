@@ -1,0 +1,264 @@
+body {
+  background-color: #21232C;
+  font-family: 'Poppins', sans-serif;
+}
+
+h5 {
+  font-size: 1.6vw;
+}
+
+.bg {
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#21232C), to(black));
+  background-image: linear-gradient(to bottom right, #21232C, black);
+  opacity: .9;
+}
+
+.brand {
+  font-family: 'Raleway', sans-serif;
+  color: #e30623;
+  font-size: 4rem;
+  float: center;
+}
+
+.desc {
+  color: white;
+}
+
+.mtop1 {
+  margin-top: 9rem;
+}
+
+.mleft1 {
+  margin-left: 5rem;
+}
+
+.submit {
+  background-color: #e30623;
+  color: white;
+  border: none !important;
+}
+
+.floatright {
+  float: right;
+}
+
+h3 {
+  color: white !important;
+}
+
+.wn-nav {
+  background: none;
+}
+
+.wn-nav a {
+  font-family: 'Raleway', sans-serif;
+  color: #e30623;
+  font-size: 2.5vw;
+}
+
+.wn-nav ul li a {
+  color: #fff;
+  font-size: 1.7vw;
+  text-transform: uppercase;
+}
+
+.member {
+  background-color: #21232C;
+  height: auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.member h2 {
+  color: #fff;
+}
+
+.member p {
+  color: #fff;
+}
+
+.details {
+  background-color: #21232C;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.details h2 {
+  color: #fff;
+}
+
+.details h3 {
+  color: #fff;
+}
+
+.details p {
+  color: #fff;
+}
+
+.np {
+  padding: 0;
+}
+
+.card {
+  overflow: hidden;
+  border: none !important;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  max-width: 100%;
+}
+
+.card:hover img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.card-img-overlay {
+  z-index: 3;
+  color: #fff !important;
+}
+
+.movie-banner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: .8;
+}
+
+.movie-title {
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner-movie-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.6vw;
+  font-weight: 700;
+}
+
+.banner-movie-subtext {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+.banner-movie-genres {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5vw;
+}
+
+.banner-content {
+  margin-left: 4rem;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-bg {
+  background: none !important;
+}
+
+.detail-more {
+  background-color: black;
+}
+
+.detail-more div {
+  margin-top: 4rem;
+  margin-left: 2rem;
+  padding: 10px;
+}
+
+.detail-more span {
+  color: white !important;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-button-next {
+  background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'>\a       <polyline fill='none' stroke='#FFFFFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' points='\a       0.375,0.375 45.63,38.087 0.375,75.8 '/>\a     </svg>") !important;
+}
+
+.swiper-button-prev {
+  background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'>\a       <polyline fill='none' stroke='#FFFFFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' points='\a       45.63,75.8 0.375,38.087 45.63,0.375 '/>\a     </svg> ") !important;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+
+.alert-warning {
+  color: #fff;
+  background-color: #e30623;
+  border: none;
+}
+
+.swal-button {
+  background-color: #e30623;
+}
+
+.swal-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: #f9233f;
+}
+
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.69);
+}
+/*# sourceMappingURL=custom.css.map */
