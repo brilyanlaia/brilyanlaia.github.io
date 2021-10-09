@@ -25,7 +25,7 @@ body {
 }
 
 .sub-header {
-  font-size: 35px;
+  font-size: 25px;
   color: white;
   font-family: "Suranna", serif;
 }
@@ -52,7 +52,7 @@ body {
 
 .sub-content {
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   margin-bottom: 80px;
 }
 
@@ -277,6 +277,13 @@ figure {
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
+  background-image: url(../images/bg-1.jpeg);
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-bg {
+    background-image: url(../images/bg-1-mobile.jpeg) !important;
+  }
 }
 
 .fh5co-bg {
@@ -359,7 +366,7 @@ figure {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 .fh5co-cover > .fh5co-container {
   position: relative;
@@ -368,9 +375,15 @@ figure {
 @media screen and (max-width: 768px) {
   .fh5co-cover {
     height: 600px;
-    background-position-x: -364px !important;
+    background-image: url(../images/bg-2-mobile.jpeg) !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
   }
 }
+
 .fh5co-cover .display-t,
 .fh5co-cover .display-tc {
   height: 900px;
@@ -436,7 +449,7 @@ figure {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
 }
 @media screen and (max-width: 768px) {
   #fh5co-counter,

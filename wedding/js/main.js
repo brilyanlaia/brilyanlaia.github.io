@@ -214,10 +214,12 @@
 	};
 
 	
+
+	
 	$(function(){
 		mobileMenuOutsideClick();
 		parallax();
-		offcanvasMenu();
+		// offcanvasMenu();
 		burgerMenu();
 		contentWayPoint();
 		dropdown();
